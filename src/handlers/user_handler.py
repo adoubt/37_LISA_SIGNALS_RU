@@ -280,7 +280,7 @@ async def handle_post(message: Message, state: FSMContext, **kwargs):
 async def fallback_handler(message: Message, **kwargs):
     if getattr(message, "pinned_message", None):
         return
-    await message.answer("Unrecognized text, this bot provides signals and information in real time. It does not communicate with you.")
+    await message.answer("<b>Нераспознанный текст, этот бот не ведет с Вами общение. Он анализирует рынок и предоставляет сигналы в режиме реального времени.</b>")
 
 
 
