@@ -97,7 +97,7 @@ def is_not_banned(function):
         user_id = event.from_user.id
 
         if await UsersDatabase.is_banned(user_id):
-            await event.answer("<b>Вы заблокированы, напишите пожалуйста в чат с Робертом для разблокировки.</b>")
+            await event.answer("<b>Вы заблокированы, напишите пожалуйста в чат с Робертом для разблокировки.</b>",parse_mode="HTML")
             return
 
         return await function(event, **kwargs)
